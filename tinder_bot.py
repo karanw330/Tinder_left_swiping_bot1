@@ -83,8 +83,6 @@ cookie_decline.click()
 
 time.sleep(5)
 
-#dislikes the first 20 people, can also be made to like
-
 '''for i in range(1,21):
     try:
         time.sleep(2)
@@ -97,7 +95,7 @@ time.sleep(5)
 for n in range(100):
     try:
         time.sleep(1)
-        print("disiking...")
+        print("disliking...")
         like_buttons = url.find_elements(By.CSS_SELECTOR, "[class*='button Lts']")
         for button in like_buttons:
             if button.text == "NOPE": button.click()
