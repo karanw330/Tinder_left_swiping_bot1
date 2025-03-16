@@ -53,10 +53,10 @@ fb_login_window = url.window_handles[1]
 url.switch_to.window(fb_login_window)
 
 fb_email = url.find_element(By.XPATH, '//*[@id="email"]')
-fb_email.send_keys("sunehrigulambi@gmail.com")
+fb_email.send_keys("YOUR_EMAIL")
 
 fb_pass = url.find_element(By.XPATH, '//*[@id="pass"]')
-fb_pass.send_keys("K@R@N7682")
+fb_pass.send_keys("PASSWORD")
 
 fb_login = url.find_element(By.NAME, 'login')
 fb_login.click()
