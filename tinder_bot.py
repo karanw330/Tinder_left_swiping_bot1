@@ -53,9 +53,11 @@ fb_login_window = url.window_handles[1]
 url.switch_to.window(fb_login_window)
 
 fb_email = url.find_element(By.XPATH, '//*[@id="email"]')
+#write your email here / store as an environment variable
 fb_email.send_keys("YOUR_EMAIL")
 
 fb_pass = url.find_element(By.XPATH, '//*[@id="pass"]')
+#write your password here / store as an environment variable
 fb_pass.send_keys("PASSWORD")
 
 fb_login = url.find_element(By.NAME, 'login')
@@ -83,15 +85,6 @@ cookie_decline.click()
 
 time.sleep(5)
 
-'''for i in range(1,21):
-    try:
-        time.sleep(2)
-        random_element = url.find_element(By.TAG_NAME, "body")
-        random_element.send_keys(Keys.ARROW_LEFT)
-    except NoSuchElementException:
-        time.sleep(2)
-        print("error")'''
-
 for n in range(100):
     try:
         time.sleep(1)
@@ -104,6 +97,6 @@ for n in range(100):
         dont_allow = url.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/button[2]/div[2]/div[2]/div')
         dont_allow.click()
 #tinder changes its xpath after every requests so it's better to find the button by its text
-
+#this bot swipes left(rejects), to right swipe, change button.text to 'LIKE'
 url.quit()
 
